@@ -153,12 +153,14 @@
     position:absolute; inset:0;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
     mix-blend-mode:overlay;
+    pointer-events:none;
   }
   .frame::after{
     content:"";
     position:absolute; inset:0;
     background:repeating-linear-gradient(100deg, transparent 0 6px, rgba(255,255,255,0.18) 7px 9px);
     opacity:0.6;
+    pointer-events:none;
   }
   .frame.p1{background:linear-gradient(140deg, #C9BFA8, #6B7B8C 55%, #2E3A45);}
   .frame.p2{background:linear-gradient(140deg, #8FA0AD, #4A5C6D 55%, #1E2932);}
