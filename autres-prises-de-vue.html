@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autres prises de vue — AFTERGLOW 2028 — Someday Production</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4EFD8;
+    --ink:#161511;
+    --copper:#C94E2B;
+    --olive:#8FA23A;
+    --denim:#2C4A82;
+    --storm:#5C6B7A;
+    --paper-soft:#EAE3C6;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'JetBrains Mono', monospace;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  body::after{
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    z-index:999;
+    opacity:0.09;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .sprocket{
+    height:22px; width:100%;
+    background:var(--ink);
+    display:flex; align-items:center; gap:14px;
+    padding:0 12px; overflow:hidden; position:relative; z-index:10;
+  }
+  .sprocket span{width:9px;height:9px;flex:none;border-radius:2px;background:var(--paper);}
+
+  header.hero{
+    padding:90px 6vw 60px;
+    position:relative;
+  }
+  .back-link{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink);
+    border-bottom:2px solid var(--copper);
+    padding-bottom:2px;
+  }
+  .back-link:hover{color:var(--copper);}
+  .eyebrow{
+    font-family:'Caveat', cursive;
+    font-size:1.5rem;
+    color:var(--copper);
+    transform:rotate(-2deg);
+    display:inline-block;
+    margin:22px 0 6px;
+  }
+  h1.title{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(2.4rem, 8vw, 6rem);
+    line-height:0.88;
+    letter-spacing:-0.01em;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+  .stamp{
+    font-family:'JetBrains Mono', monospace;
+    font-weight:700;
+    font-size:0.75rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    border:2px solid var(--ink);
+    padding:6px 12px;
+    display:inline-block;
+    transform:rotate(-4deg);
+    background:var(--paper);
+    margin-top:22px;
+  }
+  .hero-sub{
+    max-width:560px;
+    font-size:1rem;
+    line-height:1.6;
+    margin-top:24px;
+  }
+  .hero-sub b{color:var(--copper);}
+
+  .chapter{
+    position:relative;
+    padding:70px 6vw 90px;
+    border-top:3px solid var(--ink);
+  }
+  .chapter.storm{background:linear-gradient(180deg, var(--paper) 0%, #DDE1DE 100%);}
+
+  .chapter-head{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:16px;}
+  .frame-tag{
+    font-size:0.75rem; letter-spacing:0.12em; font-weight:700;
+    padding:4px 10px; border:2px solid var(--ink); background:var(--ink); color:var(--paper);
+  }
+  .chapter h2{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(1.8rem, 5vw, 3.2rem);
+    text-transform:uppercase;
+    letter-spacing:-0.01em;
+    color:var(--storm);
+  }
+  .chapter-note{
+    font-family:'Caveat', cursive;
+    font-size:1.3rem;
+    max-width:520px;
+    margin-bottom:40px;
+    opacity:0.85;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:26px;
+  }
+
+  .card{
+    background:var(--paper);
+    border:2px solid var(--ink);
+    padding:10px 10px 18px;
+    transform:rotate(var(--tilt, 0deg));
+    transition:transform .25s ease;
+  }
+  .card:hover{transform:rotate(0deg) translateY(-4px);}
+  .card:nth-child(1){--tilt:-2deg;}
+  .card:nth-child(2){--tilt:1.5deg;}
+  .card:nth-child(3){--tilt:-1deg;}
+  .card:nth-child(4){--tilt:2deg;}
+  .card:nth-child(5){--tilt:-1.5deg;}
+
+  .frame{
+    aspect-ratio:16/9; width:100%; position:relative; overflow:hidden; border:1px solid var(--ink);
+  }
+  .frame::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+    mix-blend-mode:overlay;
+  }
+  .frame::after{
+    content:"";
+    position:absolute; inset:0;
+    background:repeating-linear-gradient(100deg, transparent 0 6px, rgba(255,255,255,0.18) 7px 9px);
+    opacity:0.6;
+  }
+  .frame.p1{background:linear-gradient(140deg, #C9BFA8, #6B7B8C 55%, #2E3A45);}
+  .frame.p2{background:linear-gradient(140deg, #8FA0AD, #4A5C6D 55%, #1E2932);}
+  .frame.p3{background:linear-gradient(140deg, #3A4E63, #1B2A38 55%, #0B141C);}
+  .frame.p4{background:linear-gradient(140deg, #5C6B7A, #2C3A47 55%, #10181F);}
+  .frame.p5{background:linear-gradient(140deg, #D8CDB4, #7A8A93 55%, #364650);}
+  .frame img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .card .num{font-family:'Caveat', cursive; font-size:1.15rem; color:var(--copper); margin-top:10px;}
+  .card .cap{font-size:0.78rem; line-height:1.4; margin-top:6px;}
+
+  footer{
+    padding:60px 6vw 80px;
+    background:var(--ink);
+    color:var(--paper);
+  }
+  footer .foot-title{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(1.5rem,4vw,2.2rem);
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  footer .credit{
+    margin-top:30px;
+    font-size:0.75rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    opacity:0.6;
+  }
+  footer .credit + .credit{margin-top:8px;}
+
+  a.cta{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 22px;
+    border:2px solid var(--paper);
+    color:var(--paper);
+    text-decoration:none;
+    font-size:0.8rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  a.cta:hover{background:var(--paper); color:var(--ink);}
+
+  .lang-toggle{
+    position:fixed; top:30px; right:6vw; z-index:200;
+    display:flex; border:2px solid var(--ink); background:var(--paper);
+    font-family:'JetBrains Mono', monospace; font-size:0.75rem; font-weight:700; letter-spacing:0.06em;
+  }
+  .lang-toggle button{border:none;background:transparent;color:var(--ink);padding:7px 12px;cursor:pointer;font:inherit;}
+  .lang-toggle button.active{background:var(--ink); color:var(--paper);}
+
+  .to-top{
+    position:fixed; bottom:26px; right:6vw; z-index:200;
+    width:48px; height:48px; border:2px solid var(--ink); background:var(--copper); color:var(--paper);
+    display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1.3rem;
+    opacity:0; pointer-events:none; transition:opacity .25s ease, transform .2s ease;
+  }
+  .to-top.visible{opacity:1; pointer-events:auto;}
+  .to-top:hover{transform:translateY(-3px);}
+
+  .en{display:none;}
+  body.lang-en .fr{display:none;}
+  body.lang-en .en{display:inline;}
+  body.lang-en p.en, body.lang-en .chapter-note.en, body.lang-en .cap.en{display:block;}
+
+  @media (max-width:640px){
+    .lang-toggle{top:16px; right:4vw; font-size:0.68rem;}
+    header.hero{padding:64px 5vw 40px;}
+    .chapter{padding:50px 5vw 60px;}
+    .to-top{bottom:18px; right:4vw; width:42px; height:42px; font-size:1.1rem;}
+    footer{padding:50px 5vw 70px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .card{transition:none;}
+  }
+</style>
+</head>
+<body id="top">
+
+<div class="lang-toggle">
+  <button type="button" id="btn-fr" class="active" onclick="setLang('fr')">FR</button>
+  <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="sprocket"><script>document.write('<span></span>'.repeat(60));</script></div>
+
+<header class="hero">
+  <a class="back-link" href="index.html">← <span class="fr">Retour à AFTERGLOW</span><span class="en">Back to AFTERGLOW</span></a>
+  <div class="eyebrow"><a href="https://somedayvhs.github.io/someday-production/index.html" style="color:inherit; text-decoration:underline; text-underline-offset:3px;">Someday Production</a> — Lyon, Croix-Rousse</div>
+  <h1 class="title">Autres prises<br>de vue</h1>
+  <div class="stamp"><span class="fr">série additionnelle · portraits · pluie</span><span class="en">additional series · portraits · rain</span></div>
+  <p class="hero-sub fr">Portraits, plans buste, et une danse sous la pluie sur un toit — l'orage remplace le soleil de midi, mais la caméra garde le même réflexe : suivre plutôt que composer.</p>
+  <p class="hero-sub en">Portraits, bust shots, and a rooftop rain dance — the storm replaces the midday sun, but the camera keeps the same reflex: follow rather than compose.</p>
+</header>
+
+<section class="chapter storm">
+  <div class="chapter-head">
+    <span class="frame-tag">SÉRIE B</span>
+    <h2>Rain / Portraits</h2>
+  </div>
+  <p class="chapter-note fr">orage, contre-jour, souffle court après la danse</p>
+  <p class="chapter-note en">storm light, backlit, short breath after the dance</p>
+
+  <div class="grid">
+    <div class="card" tabindex="0">
+      <div class="frame"><img src="1000009158.png" alt="Someday Production — AFTERGLOW 2028, portrait, wet hair, night skyline" loading="lazy"></div>
+      <div class="num">50A</div>
+      <div class="cap fr">Portrait serré, regard direct, mèches mouillées sur la joue, ciel d'orage en arrière-plan.</div>
+      <div class="cap en">Close portrait, direct gaze, wet strands on the cheek, storm sky behind her.</div>
+    </div>
+    <div class="card" tabindex="0">
+      <div class="frame"><img src="1000009162.png" alt="Someday Production — AFTERGLOW 2028, close bust portrait, night city lights" loading="lazy"></div>
+      <div class="num">50B</div>
+      <div class="cap fr">Buste, lumière du soir, cheveux mouillés, regard direct face à la ville qui s'allume.</div>
+      <div class="cap en">Bust shot, evening light, wet hair, direct gaze against the city lighting up.</div>
+    </div>
+    <div class="card" tabindex="0">
+      <div class="frame"><img src="1000009160.png" alt="Someday Production — AFTERGLOW 2028, rooftop rain dance, arm raised, smiling" loading="lazy"></div>
+      <div class="num">51A</div>
+      <div class="cap fr">Toit sous la pluie, danse à bras levés, robe fine trempée, rire capté en plein mouvement.</div>
+      <div class="cap en">Rooftop in the rain, arms-raised dance, wet slip dress, laughter caught mid-motion.</div>
+    </div>
+    <div class="card" tabindex="0">
+      <div class="frame"><img src="1000009159.png" alt="Someday Production — AFTERGLOW 2028, tight crop rain dance, hair whipping" loading="lazy"></div>
+      <div class="num">51B</div>
+      <div class="cap fr">Plan resserré torse-épaules, cheveux fouettant le visage, bras écartés, capté en plein geste.</div>
+      <div class="cap en">Tight torso-shoulder crop, hair whipping across the face, arms out, caught mid-gesture.</div>
+    </div>
+    <div class="card" tabindex="0">
+      <div class="frame"><img src="1000009161.png" alt="Someday Production — AFTERGLOW 2028, quiet portrait after the dance, dusk skyline" loading="lazy"></div>
+      <div class="num">52A</div>
+      <div class="cap fr">Portrait calme après la danse, pluie qui s'apaise, souffle court, regard tourné vers la ville.</div>
+      <div class="cap en">Quiet portrait after the dance, rain easing, short breath, gaze turned toward the city.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-title">Analog imperfection is intentional.</div>
+  <a class="cta" href="index.html"><span class="fr">← Retour à AFTERGLOW</span><span class="en">← Back to AFTERGLOW</span></a>
+  <div class="credit"><a href="https://somedayvhs.github.io/someday-production/index.html" style="color:inherit; text-decoration:underline; text-underline-offset:3px;">Someday Production</a> — <span class="fr">Direction Visuelle IA</span><span class="en">AI Visual Direction</span> — Lyon, Croix-Rousse</div>
+  <div class="credit">© Someday Production 2026</div>
+</footer>
+
+<a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+<script>
+  function setLang(lang){
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('visible', window.scrollY > 500);
+  });
+</script>
+
+</body>
+</html>
